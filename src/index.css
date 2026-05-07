@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition-property: background-color, border-color, color, fill, stroke, box-shadow, filter;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
+
+:root {
+  --bg-color: #f9f9f9;
+  --nav-bg: #ffffff;
+  --text-color: #0f0f0f;
+  --secondary-text: #606060;
+  --icon-color: #5a5a5a;
+  --border-color: #ccc;
+  --border-light: #f0f0f0;
+  --border-medium: #e5e5e5;
+  --border-image: #e0e0e0;
+  --hover-bg: #f2f2f2;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --search-box-bg: transparent;
+}
+
+[data-theme="dark"] {
+  --bg-color: #0f0f0f;
+  --nav-bg: #0f0f0f;
+  --text-color: #f1f1f1;
+  --secondary-text: #aaaaaa;
+  --icon-color: #aaaaaa;
+  --border-color: #3f3f3f;
+  --border-light: #222222;
+  --border-medium: #333333;
+  --border-image: #3f3f3f;
+  --hover-bg: #222222;
+  --shadow-color: rgba(255, 255, 255, 0.05);
+  --search-box-bg: #121212;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  text-decoration: none;
+  color: var(--icon-color);
+}
+
+[data-theme="dark"] .invert-on-dark,
+[data-theme="dark"] .shortcut-links img {
+  filter: invert(1);
+}
+
+img {
+  cursor: pointer;
+}
+
+.flex-div {
+  display: flex;
+  align-items: center;
+}

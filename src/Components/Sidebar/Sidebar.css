@@ -1,0 +1,123 @@
+.sidebar {
+    background: var(--bg-color);
+    width: 240px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 100px;
+    padding-left: 16px;
+    padding-right: 12px;
+    box-sizing: border-box;
+    z-index: 5;
+    overflow-y: auto;
+    scrollbar-width: none;
+    border-right: 1px solid var(--border-light);
+}
+
+.sidebar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Shortcut Links Section */
+.shortcut-links {
+    padding-bottom: 8px;
+}
+
+.shortcut-links img {
+    width: 20px;
+    margin-right: 16px;
+    opacity: 0.75;
+    transition: opacity 0.2s, filter 0.3s ease;
+}
+
+.side-link {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2px;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.3s ease;
+    width: 100%;
+}
+
+.side-link:hover {
+    background: var(--hover-bg);
+}
+
+.side-link:hover img {
+    opacity: 1;
+}
+
+.side-link p {
+    font-size: 13.5px;
+    color: var(--text-color);
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Divider */
+.sidebar hr {
+    border: 0;
+    height: 1px;
+    background: var(--border-medium);
+    margin: 10px 10px 0 10px;
+}
+
+/* Subscribed Section */
+.subscribed-list h3 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 16px 10px 8px;
+    color: var(--secondary-text);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.subscribed-list img {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-right: 16px;
+    object-fit: cover;
+    border: 1.5px solid var(--border-image);
+}
+
+.small-sidebar {
+    width: 80px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.small-sidebar .side-link p {
+    display: none;
+}
+
+.small-sidebar h3 {
+    display: none;
+}
+
+.small-sidebar .side-link {
+    justify-content: center;
+    border-radius: 0;
+    padding: 10px 0;
+}
+
+.small-sidebar .shortcut-links img,
+.small-sidebar .subscribed-list img {
+    margin-right: 0;
+    flex-shrink: 0;
+}
+
+.small-sidebar hr {
+    margin: 10px 15px;
+}
+
+.side-link.active img {
+    padding-bottom: 2px;
+    border-bottom: 3px solid red;
+
+}

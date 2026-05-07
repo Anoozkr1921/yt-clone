@@ -1,0 +1,26 @@
+.side-video-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.side-video-list img {
+    flex-basis: 49%;
+    width: 50%;
+    border-radius: 8px;
+}
+
+.side-video-list .video-info {
+    flex-basis: 49%;
+}
+
+.side-video-list .video-info h4 {
+    font-size: 13px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.side-video-list .video-info p {
+    font-size: 12px;
+    color: var(--secondary-text);
+}
